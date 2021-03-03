@@ -1,0 +1,174 @@
+/*section 2*/
+
+.p3, .p8, .p10, .p12 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px;
+  margin-top: 100px;
+  text-align: center;
+  color: #333333;
+  line-height: 10px;
+}
+
+.p4, .p9, .p11, .p13 {
+  font-weight: 700;
+  font-size: 30px;
+  padding: 0;
+  margin: 0px;
+  text-align: center;
+  color: #333333;
+  text-transform: uppercase;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+
+.p5 {
+  font: 15px 'Roboto', sans-serif;
+  color: #999999;
+  text-align: center;
+  line-height: 20px;
+}
+
+.margin5 {
+  margin-top: 30px;
+}
+
+#for_media {
+  display: none;
+}
+
+.wrap_section2 {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: -10px 0 110px 0;
+}
+
+.wrap_section2 img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.wrap_section2 p {
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+}
+
+.wrap_section2 a {
+  text-decoration: none;
+}
+
+.for_team {
+  position: absolute;
+  top: 90px;
+  left: -10px;
+  width: 350px;
+  height: 250px;
+  background: url(../images/about1.png);
+  box-shadow: 10px 10px 0px 0px #95E1D3;
+}
+
+.wrap_section2 div:nth-child(2) {
+  margin-left: 395px;
+}
+
+/*section 3*/
+
+#s3 {
+  background-color: #95E1D3;
+}
+
+.cont3 {
+  display: flex;
+}
+
+.s3_item {
+  border-right: 1px solid #B5EAE0;
+  width: calc(100%/5);
+}
+
+.cont3:first-child {
+  border-left: 1px solid #B5EAE0;
+}
+
+.p6 {
+  font-weight: 700;
+  font-size: 72px;
+  text-align: center;
+  color: white;
+  margin: 65px 0 0 0;
+  padding: 0;
+  line-height: 100px;
+}
+
+.p7 {
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  margin: 0 0 88px 0;
+  padding: 0;
+}
+
+/*section 4*/
+
+.container_s4_1, .container_s4_2 {
+  display: flex;
+  margin-top: 45px;
+  justify-content: space-between;
+}
+
+.container_s4_2 {
+  margin: 30px 0 0px 0;
+}
+
+.s4_items {
+  width: 330px;
+  padding-bottom: 32px;
+}
+
+.item_s4_1 img {
+  float: left;
+  margin-top: 18px;
+}
+
+.item_s4_2 {
+  margin-left: 50px;
+}
+
+.s4_items h5 {
+  color: #333;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+.border_s4 {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.item_s4_2 p {
+  font: 15px 'Roboto', sans-serif;
+  color: #999999;
+  line-height: 25px;
+}
+
+/*section 5*/
+
+#s5 {
+  background-image: url(../images/back5.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.p10 {
+  padding-top: 118px;
+  margin-top: 62px;
+}
+
+.phone1 {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+}
