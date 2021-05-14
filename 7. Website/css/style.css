@@ -1,0 +1,91 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    font-family: "PT Sans";
+    color: rgb(120, 123, 128);
+    line-height: 1.714;
+    text-align: left;
+}
+
+header, nav, section, footer {
+    display: block;
+}
+
+/* =============== DEFAULT STYLES =============== */
+
+h1 {
+    font: bold 18px "PT Sans";
+    color: #384048;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font: bold 15px "PT Sans";
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 14px;
+    color: #787b80;
+    line-height: 1.714;
+}
+
+ul, ul li, p {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ul li {
+    list-style: none;
+    display: block;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+}
+
+a {
+    user-select: none;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+a img {
+    border: none;
+}
+
+.container {
+    width: 1200px;
+}
+
+.row {
+    display: flex;
+}
+
+.row>* {
+    flex-shrink: 0;
+}
+
+/* =============== HEADER =============== */
