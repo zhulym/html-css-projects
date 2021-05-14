@@ -37,9 +37,11 @@ ul li {
 img {
     border: none;
     max-width: 100%;
+    user-select: none;
 }
 
 a {
+    padding: 7px;
     user-select: none;
     text-decoration: none;
     outline: none;
@@ -58,56 +60,157 @@ a {
     }
 }
 
-$bodyBackground: #6d6d6d;
-$containerBackground: #353535;
+$headerBackground: #4d4d4d;
+$serviceBackground: rgb(124, 124, 124);
 $buttonColor: #50c3af;
+$hoverColor: #2c7266;
 
 @mixin buttonStyle() {
     background-color: $buttonColor;
-    padding: 5px;
     border-radius: 7px;
     cursor: pointer;
     transition: all 0.5s ease 0s;
     &:hover {
-        background-color: #2c7266;
+        background-color: $hoverColor;
+    }
+    &:active {
+        position: relative;
+        top: 1px;
     }
 }
 
 .container {
     width: 960px;
-    background-color: $containerBackground;
     margin: 0 auto;
 }
 
 /* =============== HEADER =============== */
 .modernist {
-    background-color: $bodyBackground;
+    background-color: $headerBackground;
 }
 
 .header__logo {
     font-size: 20px;
     font-weight: 700;
+    text-shadow: 0 0 15px #fff;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-top: 35px;
 }
 
+.header::after {
+    content: "";
+    width: 85%;
+    margin: 20px auto;
+    border-top: 1px solid rgb(133, 133, 133);
+    display: block;
+}
+
 .header__menu {
+    text-shadow: 0 0 15px #fff;
     padding-top: 10px;
     ul {
         display: flex;
     }
     li {
-        margin-left: 45px;
+        margin-left: 30px;
+    }
+
+    a {
+        border-radius: 7px;
+        transition: all 0.3s ease 0s;
         &:hover {
-            @include buttonStyle();
+            background-color: #50c3af;
+            border-radius: 7px;
         }
     }
 }
 
+.header__active {
+    background-color: #50c3af;
+    border-radius: 7px;
+}
+
+.header__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__image img {
+    border-radius: 50%;
+    border: solid 20px #6d6d6d;
+    margin: 55px 0;
+}
+
 .header__button {
     @include buttonStyle();
+}
+
+.header__info {
+    width: 35%;
+    h1 {
+        margin: 0;
+    }
+    p {
+        margin: 30px 0;
+    }
+}
+
+@mixin arrows($directionLeft, $directionRight) {
+    cursor: pointer;
+    transform: scale(1.4);
+    &:hover {
+        position: relative;
+        left: $directionLeft;
+        right: $directionRight;
+    }
+}
+
+.header__right-arrow {
+    @include arrows(15px, "");
+}
+.header__left-arrow {
+    @include arrows("", 15px);
+}
+
+// ================ Service section ======================= //
+
+.service {
+    background-color: darkgrey;
+}
+
+.service__titles {
+    display: flex;
+    justify-content: space-between;
+    padding: 55px 0;
+}
+
+.service__title-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+.service__title-item {
+    transition: all 0.3s ease 0s;
+    width: 22%;
+    background-color: #7c7c7c;
+    padding: 20px 10px;
+    color: #333;
+    h1 {
+        font-size: 32px;
+        letter-spacing: 1.5;
+        margin: 0;
+        text-align: center;
+    }
+
+    &:hover {
+        background-color: $buttonColor;
+        cursor: pointer;
+        color: #fff;
+    }
 }
