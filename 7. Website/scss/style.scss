@@ -8,6 +8,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     color: rgb(255, 255, 255);
+    outline: none;
 }
 
 /* =============== DEFAULT STYLES =============== */
@@ -182,6 +183,7 @@ $hoverColor: #2c7266;
 
 .service {
     background-color: darkgrey;
+    padding-bottom: 45px;
 }
 
 .service__titles {
@@ -213,4 +215,113 @@ $hoverColor: #2c7266;
         cursor: pointer;
         color: #fff;
     }
+}
+
+.service__work-title {
+    width: 30%;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #3a3a3a;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 32px;
+}
+
+.service__work-elements {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.service__work-item {
+    width: 29%;
+    border: 7px solid white;
+    margin-top: 35px;
+    transition: all 0.3s ease 0s;
+    &:hover {
+        cursor: pointer;
+        border: 7px solid $buttonColor;
+        box-shadow: 0 0 15px $buttonColor;
+    }
+}
+
+.service__work-image {
+    img {
+        object-fit: cover;
+    }
+}
+
+.service__work-description {
+    background-color: black;
+    text-align: center;
+    padding: 7px;
+}
+
+// ================ Contact section ======================= //
+.contacts {
+    background-color: $headerBackground;
+    padding: 45px 0;
+}
+.contacts__container {
+    display: flex;
+    justify-content: space-between;
+    color: #979797;
+    h2 {
+        color: #fff;
+    }
+    a {
+        color: $buttonColor;
+        display: inline-block;
+        padding-left: 0;
+        &:hover {
+            text-decoration: underline;
+            text-shadow: 0 0 10px white;
+        }
+    }
+    span {
+        color: $buttonColor;
+    }
+}
+
+.form__input {
+    background-color: #222;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    margin-bottom: 15px;
+    resize: vertical;
+    &:focus {
+        box-shadow: 0 0 10px white;
+    }
+}
+
+.contacts__post-title {
+    color: $buttonColor;
+    text-align: left;
+}
+
+.contacts__blog,
+.contacts__links,
+.contacts__tweets,
+.contacts__form {
+    width: 23%;
+}
+
+.form__submit {
+    padding: 10px 20px !important;
+    @include buttonStyle();
+}
+
+.footer {
+    background-color: #222;
+    color: #979797;
+    padding: 15px 0;
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
 }
