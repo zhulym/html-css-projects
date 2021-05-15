@@ -9,18 +9,32 @@ const slides = document.querySelectorAll('.header__slide');
 let currentSlide = 0;
 
 rightArrow.addEventListener('click', slideBlockRight);
+leftArrow.addEventListener('click', slideBlockLeft);
 
 function slideBlockRight() {
     for (let i = 0; i < slides.length; i++) {
         slides[i].classList.add('hide_slides');
     }
     slides[currentSlide].classList.remove('hide_slides');
-    currentSlide++;
 
-    if (currentSlide++ === slides.length) {
+    if (currentSlide + 1 === slides.length) {
         currentSlide = 0;
+    } else {
+        currentSlide++;
     }
+}
 
+function slideBlockLeft() {
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.add('hide_slides');
+    }
+    slides[currentSlide].classList.remove('hide_slides');
+
+    if (currentSlide === 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide--;
+    }
 }
 
 
