@@ -9,6 +9,7 @@ body {
     font-size: 14px;
     color: rgb(255, 255, 255);
     outline: none;
+    user-select: none;
 }
 
 /* =============== DEFAULT STYLES =============== */
@@ -47,6 +48,7 @@ a {
     text-decoration: none;
     outline: none;
     color: #fff;
+    cursor: pointer;
     &:hover {
         text-decoration: none;
     }
@@ -88,6 +90,7 @@ $hoverColor: #2c7266;
 /* =============== HEADER =============== */
 .modernist {
     background-color: $headerBackground;
+    padding-bottom: 550px;
 }
 
 .header__logo {
@@ -136,10 +139,25 @@ $hoverColor: #2c7266;
     border-radius: 7px;
 }
 
-.header__body {
+.d-flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+}
+
+.header__slider-wrapper {
+    position: relative;
+}
+
+.header__slide {
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.hide_slides {
+    opacity: 0;
 }
 
 .header__image img {
@@ -162,21 +180,23 @@ $hoverColor: #2c7266;
     }
 }
 
-@mixin arrows($directionLeft, $directionRight) {
-    cursor: pointer;
-    transform: scale(1.4);
-    &:hover {
-        position: relative;
-        left: $directionLeft;
-        right: $directionRight;
-    }
-}
+// @mixin arrows($directionLeft, $directionRight) {
+//     cursor: pointer;
+//     transform: scale(1.4);
+//     &:hover {
+//         position: relative;
+//         left: $directionLeft;
+//         right: $directionRight;
+//     }
+// }
 
-.header__right-arrow {
-    @include arrows(15px, "");
-}
+.header__right-arrow,
 .header__left-arrow {
-    @include arrows("", 15px);
+    cursor: pointer;
+    transform: scale(2);
+    &:hover {
+        transform: scale(3);
+    }
 }
 
 // ================ Service section ======================= //
@@ -214,6 +234,7 @@ $hoverColor: #2c7266;
         background-color: $buttonColor;
         cursor: pointer;
         color: #fff;
+        transform: scale(1.05);
     }
 }
 
@@ -311,10 +332,11 @@ $hoverColor: #2c7266;
 }
 
 .form__submit {
-    padding: 10px 20px !important;
+    padding: 10px 20px;
     @include buttonStyle();
 }
 
+// ================ Footer section ======================= //
 .footer {
     background-color: #222;
     color: #979797;
