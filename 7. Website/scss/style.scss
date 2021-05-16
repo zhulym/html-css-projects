@@ -138,7 +138,7 @@ $hoverColor: #2c7266;
     background-color: #50c3af;
     border-radius: 7px;
 }
-
+//======================================================//
 .d-flex {
     display: flex;
     justify-content: space-around;
@@ -147,6 +147,12 @@ $hoverColor: #2c7266;
 
 .header__slider-wrapper {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__slide-container {
+    position: relative;
 }
 
 .header__slide {
@@ -154,12 +160,14 @@ $hoverColor: #2c7266;
     position: absolute;
     top: 0px;
     left: 0px;
+    transition: all 0.3s ease 0s;
+    z-index: 5;
 }
 
 .hide_slides {
     opacity: 0;
 }
-
+//======================================================//
 .header__image img {
     border-radius: 50%;
     border: solid 20px #6d6d6d;
@@ -199,6 +207,12 @@ $hoverColor: #2c7266;
     }
 }
 
+// .header__right-arrow {
+//     position: absolute;
+//     right: 0;
+//     top: 150px;
+// }
+
 // ================ Service section ======================= //
 
 .service {
@@ -207,8 +221,8 @@ $hoverColor: #2c7266;
 }
 
 .service__titles {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     padding: 55px 0;
 }
 

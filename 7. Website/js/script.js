@@ -2,6 +2,7 @@ const headerLinks = document.querySelectorAll('.header__link');
 const contactsDate = document.querySelector('.contacts__date');
 const leftArrow = document.querySelector('.header__left-arrow');
 const rightArrow = document.querySelector('.header__right-arrow');
+const serviceItem = document.querySelectorAll('.service__work-item');
 
 
 
@@ -10,6 +11,8 @@ let currentSlide = 0;
 
 rightArrow.addEventListener('click', slideBlockRight);
 leftArrow.addEventListener('click', slideBlockLeft);
+slideBlockRight();
+setInterval(slideBlockRight, 1500);
 
 function slideBlockRight() {
     for (let i = 0; i < slides.length; i++) {
@@ -65,5 +68,4 @@ function addActiveLink(event) {
 
 let dateForBlog = new Date();
 contactsDate.innerHTML = `${dateForBlog.getFullYear()}-${dateForBlog.getMonth()}-${dateForBlog.getDate()} &nbsp; ${dateForBlog.getHours()}:${dateForBlog.getMinutes()}`;
-
 
