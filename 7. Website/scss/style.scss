@@ -12,7 +12,7 @@ body {
     user-select: none;
 }
 
-/* =============== DEFAULT STYLES =============== */
+/* ==================================  DEFAULT STYLES  ====================================== */
 
 header,
 nav,
@@ -65,6 +65,7 @@ a {
 
 $headerBackground: #4d4d4d;
 $serviceBackground: rgb(124, 124, 124);
+$footerBack: #222;
 $buttonColor: #50c3af;
 $hoverColor: #2c7266;
 
@@ -87,7 +88,7 @@ $hoverColor: #2c7266;
     margin: 0 auto;
 }
 
-/* =============== HEADER =============== */
+/* ==================================  HEADER  ================================ */
 .modernist {
     background-color: $headerBackground;
     padding-bottom: 550px;
@@ -138,21 +139,31 @@ $hoverColor: #2c7266;
     background-color: #50c3af;
     border-radius: 7px;
 }
-//======================================================//
+
 .d-flex {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.header__slider-wrapper {
-    position: relative;
+.header__content {
+    width: 90%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.header__slide-container {
+.header__body {
     position: relative;
+}
+
+.header__info {
+    margin-right: 30px;
+}
+
+.header__right-arrow,
+.header__left-arrow {
+    cursor: pointer;
+    transform: scale(1.5);
 }
 
 .header__slide {
@@ -160,14 +171,15 @@ $hoverColor: #2c7266;
     position: absolute;
     top: 0px;
     left: 0px;
-    transition: all 0.3s ease 0s;
+    transition: all 1s ease 0s;
+    opacity: 1;
     z-index: 5;
 }
 
 .hide_slides {
     opacity: 0;
 }
-//======================================================//
+
 .header__image img {
     border-radius: 50%;
     border: solid 20px #6d6d6d;
@@ -188,32 +200,7 @@ $hoverColor: #2c7266;
     }
 }
 
-// @mixin arrows($directionLeft, $directionRight) {
-//     cursor: pointer;
-//     transform: scale(1.4);
-//     &:hover {
-//         position: relative;
-//         left: $directionLeft;
-//         right: $directionRight;
-//     }
-// }
-
-.header__right-arrow,
-.header__left-arrow {
-    cursor: pointer;
-    transform: scale(2);
-    &:hover {
-        transform: scale(3);
-    }
-}
-
-// .header__right-arrow {
-//     position: absolute;
-//     right: 0;
-//     top: 150px;
-// }
-
-// ================ Service section ======================= //
+/*================================ Service section =================================== */
 
 .service {
     background-color: darkgrey;
@@ -221,8 +208,8 @@ $hoverColor: #2c7266;
 }
 
 .service__titles {
-    // display: flex;
-    // justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
     padding: 55px 0;
 }
 
@@ -293,7 +280,7 @@ $hoverColor: #2c7266;
     padding: 7px;
 }
 
-// ================ Contact section ======================= //
+/*================================ Contact section ================================*/
 .contacts {
     background-color: $headerBackground;
     padding: 45px 0;
@@ -328,6 +315,7 @@ $hoverColor: #2c7266;
     border: none;
     margin-bottom: 15px;
     resize: vertical;
+    box-sizing: border-box;
     &:focus {
         box-shadow: 0 0 10px white;
     }
@@ -350,9 +338,9 @@ $hoverColor: #2c7266;
     @include buttonStyle();
 }
 
-// ================ Footer section ======================= //
+/*================================ Footer section ================================*/
 .footer {
-    background-color: #222;
+    background-color: $footerBack;
     color: #979797;
     padding: 15px 0;
 }
@@ -360,4 +348,153 @@ $hoverColor: #2c7266;
 .footer__wrapper {
     display: flex;
     justify-content: space-between;
+}
+
+/*================================  Media Queries ================================*/
+
+// @media only screen and (max-width: 1199px) {
+// }
+
+@media only screen and (max-width: 991px) {
+    .container {
+        width: 720px;
+    }
+
+    .header__menu li {
+        margin-left: 5px;
+    }
+
+    .header__image img {
+        width: 340px;
+        height: 340px;
+        border-width: 15px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        width: 560px;
+    }
+
+    .header__content {
+        flex-wrap: wrap;
+    }
+    .header__info {
+        width: 90%;
+    }
+
+    .header__image img {
+        width: 280px;
+        height: 280px;
+        border-width: 10px;
+    }
+
+    .header__info {
+        p {
+            font-size: 16px;
+            margin: 5px 0 15px 25px;
+            text-align: justify;
+        }
+        h1 {
+            text-align: center;
+        }
+    }
+
+    .modernist {
+        padding-bottom: 720px;
+    }
+
+    .service__titles {
+        flex-wrap: wrap;
+    }
+    .service__work-title {
+        width: 50%;
+    }
+
+    .service__title-item {
+        width: 45%;
+        margin-bottom: 3%;
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .service__work-item {
+        width: 45%;
+    }
+    .contacts__blog,
+    .contacts__links,
+    .contacts__tweets,
+    .contacts__form {
+        width: 45%;
+    }
+
+    .contacts__container {
+        flex-wrap: wrap;
+        font-size: 18px;
+    }
+
+    .footer {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .container {
+        width: 100%;
+    }
+    .modernist {
+        padding-bottom: 700px;
+    }
+
+    .service__title-item {
+        width: 100%;
+        p {
+            font-size: 24px;
+            padding: 0 10px;
+        }
+    }
+
+    .header__image img {
+        width: 240px;
+        height: 240px;
+        border-width: 5px;
+        margin: 30px 0;
+    }
+
+    .service__work-title {
+        width: 70%;
+    }
+
+    .service__work-item {
+        width: 100%;
+    }
+
+    .service__work-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .contacts__blog,
+    .contacts__links,
+    .contacts__tweets,
+    .contacts__form {
+        width: 100%;
+        margin: 15px;
+    }
+    .footer {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .modernist {
+        padding-bottom: 770px;
+    }
+
+    .header__image img {
+        width: 200px;
+        height: 200px;
+    }
 }

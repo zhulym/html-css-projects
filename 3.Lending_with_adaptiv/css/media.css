@@ -172,6 +172,8 @@
     .s15_item2 {
         width: 30%;
     }
+}
+
     @media only screen and (max-width: 991px) {
         .container {
             width: 720px;
@@ -259,6 +261,7 @@
             display: none;
         }
     }
+
     @media only screen and (max-width: 767px) {
         body.lock {
             overflow: hidden;
@@ -501,7 +504,9 @@
         .menu li {
             margin: 0px 0 40px 0;
         }
-        @media only screen and (max-width: 575px) {
+    }
+
+     @media only screen and (max-width: 575px) {
             .container {
                 width: 100%;
             }
@@ -705,4 +710,4 @@
             .s15_info {
                 width: 100%;
             }
-        }
+    }

@@ -1,18 +1,20 @@
 const headerLinks = document.querySelectorAll('.header__link');
 const contactsDate = document.querySelector('.contacts__date');
-const leftArrow = document.querySelector('.header__left-arrow');
-const rightArrow = document.querySelector('.header__right-arrow');
+const leftArrow = document.querySelectorAll('.header__left-arrow');
+const rightArrow = document.querySelectorAll('.header__right-arrow');
 const serviceItem = document.querySelectorAll('.service__work-item');
-
-
-
 const slides = document.querySelectorAll('.header__slide');
 let currentSlide = 0;
 
-rightArrow.addEventListener('click', slideBlockRight);
-leftArrow.addEventListener('click', slideBlockLeft);
+
+rightArrow.forEach(el => {
+    el.addEventListener('click', slideBlockRight);
+})
+leftArrow.forEach(el => {
+    el.addEventListener('click', slideBlockLeft);
+})
 slideBlockRight();
-setInterval(slideBlockRight, 1500);
+setInterval(slideBlockRight, 2000);
 
 function slideBlockRight() {
     for (let i = 0; i < slides.length; i++) {
@@ -42,16 +44,9 @@ function slideBlockLeft() {
 
 
 
-
-
-
-
-
-
 headerLinks.forEach(item => {
     item.addEventListener('click', addActiveLink);
 })
-
 function addActiveLink(event) {
     debugger;
     headerLinks.forEach(item => {
