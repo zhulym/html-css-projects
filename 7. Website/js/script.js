@@ -4,14 +4,40 @@ const leftArrow = document.querySelectorAll('.header__left-arrow');
 const rightArrow = document.querySelectorAll('.header__right-arrow');
 const serviceItem = document.querySelectorAll('.service__work-item');
 const slides = document.querySelectorAll('.header__slide');
+const burgerIcon = document.querySelector('.burger__icon');
+const headerMenu = document.querySelector('.header__menu');
+
+// Menu
+headerLinks.forEach(item => {
+    item.addEventListener('click', addActiveLink);
+})
+function addActiveLink(event) {
+    headerLinks.forEach(item => {
+        item.classList.remove('header__active');
+    })
+    if (event.target.classList.contains('header__active')) {
+        return;
+    } else {
+        event.target.classList.add('header__active');
+    }
+}
+
+// Burger
+burgerIcon.addEventListener('click', showHideMenu);
+function showHideMenu() {
+    headerMenu.classList.toggle('menu__active');
+    burgerIcon.classList.toggle('menu__active');
+    document.body.classList.toggle('lock_page-scroll');
+}
+
+// Slider
 let currentSlide = 0;
 
-
-rightArrow.forEach(el => {
-    el.addEventListener('click', slideBlockRight);
+rightArrow.forEach(item => {
+    item.addEventListener('click', slideBlockRight);
 })
-leftArrow.forEach(el => {
-    el.addEventListener('click', slideBlockLeft);
+leftArrow.forEach(item => {
+    item.addEventListener('click', slideBlockLeft);
 })
 slideBlockRight();
 setInterval(slideBlockRight, 2000);
@@ -41,26 +67,3 @@ function slideBlockLeft() {
         currentSlide--;
     }
 }
-
-
-
-headerLinks.forEach(item => {
-    item.addEventListener('click', addActiveLink);
-})
-function addActiveLink(event) {
-    debugger;
-    headerLinks.forEach(item => {
-        item.classList.remove('header__active');
-    })
-    if (event.target.classList.contains('header__active')) {
-        return;
-    } else {
-        event.target.classList.add('header__active');
-    }
-}
-
-
-
-let dateForBlog = new Date();
-contactsDate.innerHTML = `${dateForBlog.getFullYear()}-${dateForBlog.getMonth()}-${dateForBlog.getDate()} &nbsp; ${dateForBlog.getHours()}:${dateForBlog.getMinutes()}`;
-
