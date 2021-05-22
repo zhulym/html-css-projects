@@ -5,7 +5,7 @@ body {
 }
 
 header {
-  background-image: url(../images/back1.png);
+  background-image: url(../images/desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -118,6 +118,10 @@ a.rollover2:hover {
   font-weight: 700;
   margin: 0;
   line-height: 140px;
+}
+
+.welcome__shadow{
+  text-shadow: 0 0 15px white;
 }
 
 .button {
