@@ -1,3 +1,3 @@
-# my_html/css_projects
+# my_projects
 
 Here are the projects I'm working on
