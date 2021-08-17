@@ -1,4 +1,4 @@
-# my_projects
+# my_html/css_projects
 Here are the projects I'm working on
 
 - https://zhulym.github.io/html-css-projects/museum
