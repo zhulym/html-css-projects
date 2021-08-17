@@ -93,7 +93,7 @@ a img {
 /* =============== HEADER =============== */
 
 .header {
-    background: url(../images/header/headerBack.jpg) no-repeat;
+    background: url(../images/header/headerback.jpg) no-repeat;
     background-size: cover;
     padding-top: 60px;
 }
